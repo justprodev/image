@@ -56,6 +56,9 @@ Image copyExpandCanvas(Image src,
   // Create a new Image with the specified dimensions or use the provided image
   final Image expandedCanvas =
       toImage ?? Image(width: newWidth, height: newHeight);
+  // pass original format to avoid problem with colors
+  // final Image expandedCanvas =
+  //     toImage ?? Image(width: newWidth, height: newHeight,  format: src.format);
 
   // If a background color is provided, set all pixels to that color
   // If not, leave them transparent (default behavior)
